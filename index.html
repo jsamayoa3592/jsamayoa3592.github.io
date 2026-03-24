@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV Online - Jesús Samayoa</title>
+  <style>
+    :root {
+      --azul: #163b77;
+      --azul-claro: #1f5fbf;
+      --gris-fondo: #f3f6fb;
+      --gris-texto: #2f3542;
+      --gris-suave: #6b7280;
+      --blanco: #ffffff;
+      --borde: #e5e7eb;
+      --sombra: 0 12px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #eef3fb 0%, #f8fbff 100%);
+      color: var(--gris-texto);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: var(--blanco);
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: var(--sombra);
+    }
+
+    .hero {
+      background: linear-gradient(135deg, var(--azul) 0%, var(--azul-claro) 100%);
+      color: white;
+      padding: 40px 30px;
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+      flex-wrap: wrap;
+    }
+
+    .profile-pic {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid rgba(255, 255, 255, 0.9);
+      background: white;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.18);
+    }
+
+    .hero-text h1 {
+      margin: 0;
+      font-size: 2.2rem;
+    }
+
+    .hero-text p {
+      margin: 10px 0 0;
+      font-size: 1.05rem;
+      opacity: 0.95;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 0;
+    }
+
+    .left {
+      background: #f8fafc;
+      padding: 30px 24px;
+      border-right: 1px solid var(--borde);
+    }
+
+    .right {
+      padding: 30px 28px;
+    }
+
+    .card {
+      background: white;
+      border: 1px solid var(--borde);
+      border-radius: 14px;
+      padding: 18px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      color: var(--azul);
+      font-size: 1.1rem;
+      border-bottom: 2px solid #dbe7ff;
+      padding-bottom: 8px;
+    }
+
+    .info-item {
+      margin-bottom: 12px;
+    }
+
+    .info-item strong {
+      display: block;
+      color: var(--azul);
+      margin-bottom: 4px;
+      font-size: 0.95rem;
+    }
+
+    .info-item span,
+    .info-item p {
+      margin: 0;
+      color: var(--gris-texto);
+      font-size: 0.96rem;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .tag {
+      background: #eaf2ff;
+      color: var(--azul);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 0.9rem;
+      font-weight: bold;
+    }
+
+    .timeline-item {
+      margin-bottom: 22px;
+      padding-bottom: 18px;
+      border-bottom: 1px solid var(--borde);
+    }
+
+    .timeline-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .timeline-item h3 {
+      margin: 0 0 6px;
+      color: var(--azul);
+      font-size: 1.05rem;
+    }
+
+    .timeline-item .subtitle {
+      margin: 0 0 10px;
+      color: var(--gris-suave);
+      font-size: 0.93rem;
+    }
+
+    .timeline-item ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .timeline-item li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .profile-text {
+      margin: 0;
+      line-height: 1.7;
+      text-align: justify;
+    }
+
+    .footer {
+      text-align: center;
+      padding: 18px;
+      background: #f8fafc;
+      color: var(--gris-suave);
+      font-size: 0.92rem;
+      border-top: 1px solid var(--borde);
+    }
+
+    @media (max-width: 850px) {
+      .content {
+        grid-template-columns: 1fr;
+      }
+
+      .left {
+        border-right: none;
+        border-bottom: 1px solid var(--borde);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .container {
+        margin: 15px;
+        border-radius: 14px;
+      }
+
+      .hero {
+        padding: 28px 20px;
+      }
+
+      .hero-text h1 {
+        font-size: 1.8rem;
+      }
+
+      .right,
+      .left {
+        padding: 22px 18px;
+      }
+
+      .hero-content {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="hero">
+      <div class="hero-content">
+        <img
+          class="profile-pic"
+          src="https://w7.pngwing.com/pngs/178/595/png-transparent-user-profile-computer-icons-login-user-avatars-thumbnail.png"
+          alt="Foto de perfil"
+        />
+        <div class="hero-text">
+          <h1>Jesús Samayoa</h1>
+          <p>Estudiante de Desarrollo de Software</p>
+          <p>Currículum Vitae Online</p>
+        </div>
+      </div>
+    </header>
+
+    <main class="content">
+      <aside class="left">
+        <div class="card">
+          <h2 class="section-title">Datos personales</h2>
+
+          <div class="info-item">
+            <strong>Nombre</strong>
+            <span>Jesús Samayoa</span>
+          </div>
+
+          <div class="info-item">
+            <strong>Carnet</strong>
+            <span>1900346</span>
+          </div>
+
+          <div class="info-item">
+            <strong>Ubicación</strong>
+            <span>Guatemala</span>
+          </div>
+
+          <div class="info-item">
+            <strong>Modalidad</strong>
+            <span>Estudiante</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Habilidades</h2>
+          <div class="tag-list">
+            <span class="tag">HTML</span>
+            <span class="tag">CSS</span>
+            <span class="tag">GitHub</span>
+            <span class="tag">Trabajo en equipo</span>
+            <span class="tag">Responsabilidad</span>
+            <span class="tag">Aprendizaje continuo</span>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Idiomas</h2>
+          <div class="info-item">
+            <strong>Español</strong>
+            <span>Nativo</span>
+          </div>
+          <div class="info-item">
+            <strong>Inglés</strong>
+            <span>Básico</span>
+          </div>
+        </div>
+      </aside>
+
+      <section class="right">
+        <div class="card">
+          <h2 class="section-title">Perfil profesional</h2>
+          <p class="profile-text">
+            Estudiante de Desarrollo de Software con interés en programación,
+            desarrollo web y uso de herramientas tecnológicas. Me caracterizo
+            por ser una persona responsable, organizada y con disposición para
+            aprender constantemente. Busco fortalecer mis conocimientos
+            académicos y aplicarlos en proyectos que contribuyan a mi
+            crecimiento profesional.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Educación</h2>
+          <div class="timeline-item">
+            <h3>Técnico en Desarrollo de Software</h3>
+            <p class="subtitle">Universidad Galileo | En curso</p>
+            <ul>
+              <li>Formación en desarrollo web, programación y herramientas tecnológicas.</li>
+              <li>Participación en actividades y proyectos académicos orientados al área informática.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="card">
+          <h2 class="section-title">Experiencia y proyectos</h2>
+          <div class="timeline-item">
+            <h3>Proyecto CV Online</h3>
+            <p class="subtitle">Proyecto académico | 2026</p>
+            <ul>
+              <li>Creación de un currículum vitae en línea utilizando HTML y CSS.</li>
+              <li>Publicación del sitio web mediante GitHub Pages.</li>
+              <li>Diseño adaptable para visualización en computadora y dispositivos móviles.</li>
+            </ul>
+          </div>
+
+          <div class="timeline-item">
+            <h3>Prácticas de desarrollo web</h3>
+            <p class="subtitle">Formación académica</p>
+            <ul>
+              <li>Edición de archivos HTML en Visual Studio Code.</li>
+              <li>Uso básico de Git y repositorios para gestión de proyectos.</li>
+              <li>Aplicación de estilos CSS para mejorar la presentación visual de páginas web.</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      CV Online de Jesús Samayoa | Carnet 1900346
+    </footer>
+  </div>
+</body>
+</html>
